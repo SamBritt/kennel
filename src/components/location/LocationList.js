@@ -7,16 +7,14 @@ export default class LocationList extends Component {
         return (
             <React.Fragment>
                 <div>
-                    <article className="wrapper">
-                        {
-                            this.props.locations.map(location =>
-                                <div key={location.id}>
-                                    {location.name}
-                                    {location.address}
-                                </div>
-                            )
-                        }
-                    </article>
+                    {
+                        this.props.locations.map(location =>
+                            <div key={location.id}>
+                                {location.name}
+                                {location.address}
+                            </div>
+                        )
+                    }
                 </div>
             </React.Fragment>
         );
