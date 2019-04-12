@@ -6,7 +6,7 @@ export default class LocationList extends Component {
     render() {
         return (
             <React.Fragment>
-                <div>
+            <article className = "wrapper">
                     {
                         this.props.locations.map(location =>
                             <div key={location.id}>
@@ -15,7 +15,7 @@ export default class LocationList extends Component {
                             </div>
                         )
                     }
-                </div>
+                </article>
             </React.Fragment>
         );
     }
