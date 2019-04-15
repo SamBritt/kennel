@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import "./location.css"
-import Kennel from '../Kennel';
 
 export default class LocationList extends Component {
     render() {
