@@ -5,7 +5,7 @@ export default class LocationList extends Component {
     render() {
         return (
             <React.Fragment>
-            <article className = "wrapper">
+                <article className="wrapper">
                     {
                         this.props.locations.map(location =>
                             <div key={location.id}>

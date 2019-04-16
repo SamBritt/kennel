@@ -4,6 +4,7 @@ import AnimalList from './animals/AnimalList'
 import LocationList from './location/LocationList'
 import EmployeeList from './employee/EmployeeList'
 import OwnersList from './owners/OwnersList'
+import AnimalManager from '../modules/AnimalManager'
 
 
 export default class ApplicationViews extends Component {
@@ -16,8 +17,7 @@ export default class ApplicationViews extends Component {
     componentDidMount() {
         const newState = {}
 
-        fetch("http://localhost:5002/animals")
-            .then(r => r.json())
+        AnimalManager.getAll()
             .then(animals => newState.animals = animals)
             .then(() => fetch("http://localhost:5002/locations"))
             .then(r => r.json())
@@ -57,12 +57,12 @@ export default class ApplicationViews extends Component {
         return fetch(`http://localhost:5002/owners/${id}`, {
             method: "DELETE"
         })
-        .then(e => e.json())
-        .then(() => fetch(`http://localhost:5002/owners`))
-        .then(e => e.json())
-        .then(owners => this.setState({
-            owners: owners
-        }))
+            .then(e => e.json())
+            .then(() => fetch(`http://localhost:5002/owners`))
+            .then(e => e.json())
+            .then(owners => this.setState({
+                owners: owners
+            }))
     }
 
     render() {
@@ -80,8 +80,8 @@ export default class ApplicationViews extends Component {
                         employees={this.state.employees} />
                 }} />
                 <Route path="/owners" render={(props) => {
-                    return <OwnersList removeClient = {this.removeClient}
-                    owners={this.state.owners} />
+                    return <OwnersList removeClient={this.removeClient}
+                        owners={this.state.owners} />
                 }} />
             </React.Fragment>
         )
