@@ -1,16 +1,20 @@
 {
   "employees": [
     {
+      "id": 1,
+      "name": "James Jameson"
+    },
+    {
       "id": 2,
-      "name": "Jordan Nelson"
+      "name": "Mickey Mickerson"
     },
     {
       "id": 3,
-      "name": "Zoe LeBlanc"
+      "name": "Mackaroy Mackerson"
     },
     {
       "id": 4,
-      "name": "Blaise Roberts"
+      "name": "College McStudent"
     }
   ],
   "locations": [
@@ -28,26 +32,35 @@
   "animals": [
     {
       "id": 4,
-      "name": "Henley"
+      "name": "Oliver"
     },
     {
       "id": 5,
-      "name": "Derkins"
+      "name": "Wookie"
     },
     {
       "id": 6,
-      "name": "Checkers"
+      "name": "Sr. Wiliam James the 4th"
+    },
+    {
+      "id": 7,
+      "name": "Doge"
     }
   ],
   "owners": [
     {
-      "id": 3,
-      "name": "Mary McMaryson",
+      "id": 6,
+      "name": "James McJamey",
+      "phoneNumber": "(615)334-2345"
+    },
+    {
+      "id": 7,
+      "name": "Dill McDillson",
       "phoneNumber": "(615)487-2345"
     },
     {
-      "id": 4,
-      "name": "Jack McJackerson",
+      "id": 8,
+      "name": "Doley McDoley",
       "phoneNumber": "(615)334-2345"
     }
   ]

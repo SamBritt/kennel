@@ -12,7 +12,7 @@ export default class OwnersList extends Component {
                             <h5 className="card-body">
                                 {owner.name}
                                 <button
-                                    onClick = {() => this.props.removeClient(owner.id)}
+                                    onClick = {() => this.props.removeClient("owners", owner.id)}
                                     className = "card-link">Remove Client</button>
                             </h5>
                         </div>

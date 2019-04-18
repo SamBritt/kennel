@@ -12,7 +12,7 @@ export default class EmployeeList extends Component {
                                 <h5 className="card-title">
                                     {employee.name}
                                     <button
-                                        onClick={() => this.props.fireEmployee(employee.id)}
+                                        onClick={() => this.props.fireEmployee("employees", employee.id)}
                                         className="card-link">Fire</button>
                                 </h5>
                             </div>
